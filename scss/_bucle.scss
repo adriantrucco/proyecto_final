@@ -1,0 +1,4 @@
+@import './grids';
+@for $v from 1 to 4{
+    .section#{$v} {font-size: $medidaBasica * ($v*2);}
+}

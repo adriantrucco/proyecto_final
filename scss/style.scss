@@ -1,0 +1,312 @@
+@import './grids';
+@import './operaciones';
+@import './bucle';
+
+/*colores*/
+  /*fuentes*/
+  /*medidas*/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*menu*/
+.container-fluid{
+        background-color: $colorPrincipal;
+        border: double white 20px;
+        color: $colorSecundario;
+}
+        
+ul{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    a{
+        list-style-type: none;
+        align-items: center;
+        text-decoration: none;
+        color: $colorPrincipal;
+    }
+}
+div{
+    img{
+        display: block; 
+        margin:auto;
+                centrado{
+                    text-align: center;
+        }
+    }
+}
+
+.contactos h3{
+        font-family: $fuentePrincipal;
+        color: $colorSecundario;
+        float:left;
+        background-color:#00FFFF;
+}
+
+/*quienes somos*/
+.quienesSomos h1{
+    height: 100px;
+    transition: height 2s;
+}
+
+.quienesSomos h1{
+    grid-area: h1;
+    animation-name: animacion_h1;
+    animation-iteration-count: infinite;
+    animation-timing-function:ease-in;
+    animation-duration: 10s;
+}
+
+    @keyframes animacion_h1{
+        0%{
+           font-size: 15px;
+            color: rgb(107, 88, 216);
+        }
+        30%{
+            font-size: 20px;
+            color: rgb(17, 19, 184);  
+        }
+        60%{
+            font-size: 35px;
+            color: rgb(22, 2, 59);
+        }
+        100%{
+            font-size: 45px;
+            color: rgb(14, 2, 14);
+        }
+    }
+
+.container-md{
+    a{
+        display: flex;
+        align-items: center;
+        color:$colorPrincipal;
+        list-style-type: none;
+        text-decoration: none;
+    }
+}
+   
+.quienesSomos{
+    background-image: linear-gradient(to right, rgb(85, 204, 219), rgb(61, 231, 203), rgb(125, 243, 204));
+    background-color: $colorTerciario;
+    p{
+        color: $colorPrincipal;
+        font-family: $fuenteSecundaria;
+        font-size: 18px;}
+    h1{
+    color:$colorPrincipal;
+    font-family:$fuentePrincipal;
+    text-align: center;
+    font-size: 40px;}
+    li{
+        color: $colorPrincipal;
+        font-family: $fuenteSecundaria;
+        font-size: 18px;
+    }
+}
+
+/*clases*/
+
+body{
+    background-color: $colorTerciario;
+    p{
+        color: $colorPrincipal;
+        font-family: $fuenteSecundaria;
+        font-size: 18px;
+        li{
+            color:$colorPrincipal;
+            font-family: $fuenteSecundaria;
+            font-size: 18px;
+        }
+    }
+}
+
+/*.title{
+    font-size: 40px;
+    font-family: $fuentePrincipal;
+    color: $colorPrincipal;
+}
+.title{
+    grid-area: title;
+    animation-name: animacion_title;
+    animation-iteration-count: infinite;
+    animation-timing-function:ease-in-out;
+    animation-duration: 10s;
+}
+
+    @keyframes animacion_title{
+        0%{
+           font-size: 15px;
+            color: rgb(107, 88, 216);
+        }
+        30%{
+            font-size: 20px;
+            color: rgb(17, 19, 184);  
+        }
+        60%{
+            font-size: 35px;
+            color: rgb(22, 2, 59);
+        }
+        100%{
+            font-size: 45px;
+            color: rgb(14, 2, 14);
+        }
+    }
+*/
+.obras{
+    font-size: 25px;
+    color: $colorPrincipal;
+}
+
+
+main{
+    display: grid;
+    grid-template-areas:
+    'titulo titulo titulo' 
+    'text texto aside';
+    grid-template-columns: 2fr 5fr 5fr;
+    gap: 10px;
+    margin: 10px;
+}
+
+/*novedades*/
+
+.container-all{
+    height: 1000px;
+    width: 100%;
+    max-width: 1370px;;
+    margin: auto;
+    padding: 60px;
+    margin-top: 100px;
+    background-color: $colorTerciario;
+    margin-top: 0px;
+
+}
+
+.title{
+    font-size: 40px;
+    font-family: $fuentePrincipal;
+    color: $colorPrincipal;
+}
+
+.container-all img{
+    width: 350px;
+    float: left;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    grid-area: img;
+    transform: rotate(-3deg);
+}
+
+.container-all img:hover{
+    transform: translateZ(30px);
+}
+
+.container-all{
+    p{ color:$colorPrincipal;
+        background-color:$colorTerciario;
+        font-family:$fuenteSecundaria;
+        font-size: 18px;
+        font-weight: 300;
+    }
+}
+
+.imagen3{
+    float:right;
+}
+
+/*Galeria*/
+
+.main{
+    display: grid;
+    grid-template-areas:
+    "caja 1 caja 2 caja 2"
+    "caja 2 caja 3 caja 4"
+    "caja 5 caja 6 caja 7";
+     grid-template-columns: 5fr 4fr 3fr;
+    grid-template-rows:150px 100px 50px;
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+    justify-items: stretch;
+    align-items: stretch;
+     width: 810px;
+    justify-content:space-evenly;
+    height: 715px;
+    align-content:stretch;
+}
+
+caja{
+    width: 180px;
+    height: 200px;
+}
+
+/*media querie*/
+
+/*ESCRITORIO*/
+
+@media only screen and (mind-width: 768px) {
+    body{
+        background-color: black;
+    }
+}
+
+main{
+    display: grid;
+    grid-template-areas:
+    "caja 1 caja 2 caja 2"
+    "caja 2 caja 3 caja 4"
+    "caja 5 caja 6 caja 7";
+     grid-template-columns: 5fr 4fr 3fr;
+    grid-template-rows:300px 200px 100px 100px 100px;
+    grid-column-gap: 10px;
+    grid-row-gap: 8px;
+    justify-items: stretch;
+    align-items: stretch;
+}
+
+/*TABLET*/
+@media only screen and (max-width:767px) and (mind-width:321px){
+    body{
+        background-color: rgb(66, 13, 212);
+        }
+}
+
+main{
+    display: grid;
+    grid-template-areas:
+    "caja 1 caja 2 "
+    "caja 3 caja 4"
+    "caja 5 caja 6 caja 7";
+     grid-template-columns: 5fr 4fr 3fr;
+    grid-template-rows:300px 400px 300px;
+    grid-column-gap: 10px;
+    grid-row-gap: 8px;
+    justify-items: stretch;
+    align-items: stretch;
+}
+       
+/*MOBILE*/
+
+@media only screen and (max-width:320px) {
+    body{
+        background-color:rgb(5, 114, 32);
+    }
+}
+
+main{
+    display: grid;
+    grid-template-areas:
+    "caja 1 caja 2"
+    "caja 3 caja 4"
+    "caja 5 caja 6 caja 7";
+     grid-template-columns: 5fr 3fr;
+    grid-template-rows:300px 340px;
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+    justify-items: stretch;
+    align-items: stretch;
+}
