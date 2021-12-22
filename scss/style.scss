@@ -18,6 +18,7 @@
         background-color: $colorPrincipal;
         border: double white 20px;
         color: $colorSecundario;
+        font-family: $fuentePrincipal;
 }
         
 ul{
@@ -60,14 +61,14 @@ div{
         text-decoration: none;
     }
 }
-   
+
 .quienesSomos{
-    background-image: linear-gradient(to right, rgb(85, 204, 219), rgb(61, 231, 203), rgb(125, 243, 204));
-    background-color: $colorTerciario;
+    background-image: linear-gradient(to right, rgb(30, 148, 99), rgb(26, 145, 125), rgb(57, 168, 131));
     p{
         color: $colorPrincipal;
-        font-family: $fuenteSecundaria;
-        font-size: 18px;}
+        font-family:'Times New Roman', Times, serif;
+        font-size: 18px;
+    }
     h1{
     color:$colorSecundario;
     font-family:$fuentePrincipal;
@@ -75,12 +76,27 @@ div{
     font-size: 40px;
     background-color: #087070;
     }
-    li{
+    
+    h2{
         color: $colorPrincipal;
         font-family: $fuenteSecundaria;
-        font-size: 18px;
+        background-color: $colorCuaternario;
+        font-size: 20px;
     }
-}
+
+    h3{
+        color: $colorSecundario;
+        font-family:$fuenteSecundaria;
+        font-size: 20px;
+    }
+    
+    h4{
+        color:$colorPrincipal;
+        font-family: $fuenteSecundaria;
+        font-size: 18px;
+        text-align:justify;
+    }
+   }
 
 /*clases*/
 
@@ -140,6 +156,7 @@ main{
     font-family: $fuentePrincipal;
     color: $colorSecundario;
     background-color: #087070;
+    text-align:center;
     
 }
 
@@ -171,27 +188,17 @@ main{
 
 /*Galeria*/
 
-.main{
-    display: grid;
-    grid-template-areas:
-    "caja 1 caja 2 caja 2"
-    "caja 2 caja 3 caja 4"
-    "caja 5 caja 6 caja 7";
-     grid-template-columns: 5fr 4fr 3fr;
-    grid-template-rows:150px 60px 50px;
-    grid-column-gap: 10px;
-    grid-row-gap: 10px;
-    justify-items: stretch;
-    align-items: stretch;
-     width: 810px;
-    justify-content:space-evenly;
-    height: 715px;
-    align-content:stretch;
-}
-
 h1{
     color: $colorSecundario;
     background-color: #087070;
+    text-align: center;
+}
+
+.fotos{
+    p{
+        font-family:Georgia, 'Times New Roman', Times, serif;
+        color: $colorSecundario;
+    }
 }
 
 caja{
