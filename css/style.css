@@ -94,6 +94,12 @@ div img {
     font-size: 18px;
     text-align: justify; }
 
+footer h5 {
+  color: white;
+  font-family: "Arial";
+  font-size: 12px;
+  font-family: "Arial"; }
+
 /*clases*/
 body {
   background-color: #0CC9A0; }
@@ -116,16 +122,25 @@ body {
   font-size: 25px;
   color: #000000; }
 
-main {
-  display: grid;
-  grid-template-areas: 'titulo titulo titulo'  'text texto aside';
-  grid-template-columns: 2fr 5fr 5fr;
-  gap: 10px;
-  margin: 10px; }
+/*
+main{
+    display: grid;
+    grid-template-areas:
+    'titulo titulo titulo' 
+    'text texto texto'
+    'foto foto  foto';
+    grid-template-columns: 5fr 5fr 2fr;
+    grid-template-rows:500px 600px;
+    gap:8px;
+    margin:2px;
+}
+*/
+.fotos {
+  overflow: hidden; }
 
 /*novedades*/
 .container-all {
-  height: 1000px;
+  height: 900px;
   width: 100%;
   max-width: 1370px;
   margin: auto;
@@ -159,6 +174,12 @@ main {
   font-size: 18px;
   font-weight: 300; }
 
+.imagen1 {
+  float: right; }
+
+.imagen2 {
+  float: left; }
+
 .imagen3 {
   float: right; }
 
@@ -186,7 +207,7 @@ main {
   display: grid;
   grid-template-areas: "caja 1 caja 2 caja 2" "caja 2 caja 3 caja 4" "caja 5 caja 6 caja 7";
   grid-template-columns: 5fr 4fr 3fr;
-  grid-template-rows: 300px 200px 100px 100px 100px;
+  grid-template-rows: 300px 200px 100px;
   grid-column-gap: 10px;
   grid-row-gap: 8px;
   justify-items: stretch;
@@ -199,11 +220,11 @@ main {
 
 main {
   display: grid;
-  grid-template-areas: "caja 1 caja 2 " "caja 3 caja 4" "caja 5 caja 6 caja 7";
-  grid-template-columns: 5fr 4fr 3fr;
-  grid-template-rows: 300px 400px 300px;
+  grid-template-areas: "caja 1 caja 2" "caja 3 caja 4" "caja 5";
+  grid-template-columns: 5fr 3fr;
+  grid-template-rows: 300px 340px;
   grid-column-gap: 10px;
-  grid-row-gap: 8px;
+  grid-row-gap: 10px;
   justify-items: stretch;
   align-items: stretch; }
 
@@ -214,9 +235,9 @@ main {
 
 main {
   display: grid;
-  grid-template-areas: "caja 1 caja 2" "caja 3 caja 4" "caja 5 caja 6 caja 7";
+  grid-template-areas: "caja 1 caja 2" "caja 3 caja 4";
   grid-template-columns: 5fr 3fr;
-  grid-template-rows: 300px 340px;
+  grid-template-rows: 250px 300px;
   grid-column-gap: 10px;
   grid-row-gap: 10px;
   justify-items: stretch;
